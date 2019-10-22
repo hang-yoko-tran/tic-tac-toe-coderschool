@@ -49,6 +49,7 @@ ol, ul {
   text-align: center;
   width: 150px;
   color: orange;
+  box-shadow: 6px 11px 0 0 #0b0221;
 }
 
 .square:focus {
@@ -78,6 +79,9 @@ ol, ul {
   border-radius: 6px;
   margin-top: 20px;
   text-align: center;
+  box-shadow: 6px 11px 0 0 #0b0221;
+  color: #41AE60;
+  
 }
 
 .body-content {
@@ -86,7 +90,7 @@ ol, ul {
 
 .pug {
   margin-left: 50px;
-  margin-top: 180px;
+  margin-top: 300px;
   width: 218px;
   height: 216px;
 }
