@@ -1,26 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
+
 import './App.css';
+
+const Square = props => {
+  const [value, setValue] = useState(null);
+
+  return (
+    <button
+      className="square"
+      onClick={() => setValue('X')} /* updated line */
+    >
+      {value} {/* updated line */}
+    </button>
+  );
+};
+
+const Board = props => {
+  const initialSquares = Array(9).fill(null); /* added line */
+  const [squares, setSquares] = useState(initialSquares); /* added line */
+ return (
+   initialSquares.map(() => {
+     <Square/
+   })
+ )
+
+}
+
+
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Board/>
     </div>
-  );
-}
+  )}
 
-export default App;
+  export default App
