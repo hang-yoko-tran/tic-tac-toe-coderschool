@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import Board from './Board'
 
+
 export default function Game(props) {
     const initialHistory = [
         { squares: Array(9).fill(null) }
@@ -38,7 +39,7 @@ export default function Game(props) {
           : `Go to game start`;
         return (
           <li>
-            <button onClick={() => jumpTo(move)}>{description}</button>
+            <button className="btn-description" onClick={() => jumpTo(move)}>{description}</button>
           </li>
         );
       });
@@ -58,7 +59,7 @@ export default function Game(props) {
             />
           </div>
           <div className="game-info">
-            <div>{status}</div>
+            <div className="game-status">{status}</div>
             <ol>{moves}</ol>
           </div>
         </div>
